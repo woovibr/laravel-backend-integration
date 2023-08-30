@@ -13,10 +13,10 @@ class OpenPixServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->app->singleton(Client::class, function () {
-            return new Client(
-                env("OPENPIX_APP_ID"),
-                env("OPENPIX_BASE_URI", "https://api.openpix.com.br")
-            );
+            $appId = env('OPENPIX_APP_ID');
+            $baseUri = env('OPENPIX_BASE_URI', 'https://api.openpix.com.br');
+
+            return new Client($appId, $baseUri);
         });
     }
 }
