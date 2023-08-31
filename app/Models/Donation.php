@@ -12,5 +12,6 @@ class Donation extends Model
     protected $fillable = [
         'value',
         'comment',
+        'correlationID',
     ];
 }
