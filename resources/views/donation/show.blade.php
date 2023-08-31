@@ -9,6 +9,9 @@
 
         <dt>Donation comment</dt>
         <dd>{{ $donation->comment }}</dd>
+
+        <dt>Donation status</dt>
+        <dd>{{ $donation->status }}</dd>
     </dl>
 
     <div class="woovi-order"></div>
