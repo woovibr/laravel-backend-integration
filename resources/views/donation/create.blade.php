@@ -3,7 +3,7 @@
 @section('title', 'Create a donation')
 
 @section('content')
-    <form method="POST" action="{{ route('donations.store') }}" novalidate>
+    <form method="POST" action="{{ route('donation.store') }}" novalidate>
         @csrf
 
         @if(session()->has('error'))
