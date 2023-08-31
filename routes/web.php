@@ -14,8 +14,7 @@ use App\Http\Controllers\DonationController;
 |
 */
 
-Route::resource('', DonationController::class)
-    ->only(['index', 'create', 'store', 'show'])
-    ->names([
-        'store' => 'donations.store',
-    ]);
+Route::get('/', fn () => redirect()->route('donation.index'));
+
+Route::resource('donation', DonationController::class)
+    ->only(['index', 'create', 'store', 'show']);
