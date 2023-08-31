@@ -81,5 +81,6 @@ class DonationController extends Controller
      */
     public function show(Donation $donation)
     {
+        return view('donation.show', compact('donation'));
     }
 }
