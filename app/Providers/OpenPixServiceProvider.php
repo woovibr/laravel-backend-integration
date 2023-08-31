@@ -16,7 +16,7 @@ class OpenPixServiceProvider extends ServiceProvider
             $appId = env('OPENPIX_APP_ID');
             $baseUri = env('OPENPIX_BASE_URI', 'https://api.openpix.com.br');
 
-            return new Client($appId, $baseUri);
+            return Client::create($appId, $baseUri);
         });
     }
 }
