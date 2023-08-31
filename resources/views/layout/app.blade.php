@@ -15,5 +15,7 @@
 
         @yield('content')
     </section>
+
+    @stack('scripts')
 </body>
 </html>
