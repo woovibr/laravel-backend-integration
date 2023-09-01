@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DonationController;
+use App\Http\Controllers\WebhookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +19,5 @@ Route::get('/', fn () => redirect()->route('donation.index'));
 
 Route::resource('donation', DonationController::class)
     ->only(['index', 'create', 'store', 'show']);
+
+Route::post('/webhook', [WebhookController::class, 'receive']);
