@@ -95,7 +95,7 @@ class WebhookController extends Controller
      */
     private function isChargePaidPayload(Request $request)
     {
-        $event = $request->input("evento");
+        $event = $request->input("event");
 
         $allowedEvents = [
             self::OPENPIX_CHARGE_COMPLETED_EVENT,
