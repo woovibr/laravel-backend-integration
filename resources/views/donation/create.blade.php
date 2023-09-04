@@ -33,6 +33,7 @@
                 class="form-control @error('comment') is-invalid @enderror"
                 id="donationComment"
                 rows="5"
+                name="comment"
             ></textarea>
             @error('comment')
                 <div class="invalid-feedback">{{ $message }}</div>
