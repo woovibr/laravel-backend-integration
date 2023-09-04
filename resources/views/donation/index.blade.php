@@ -3,7 +3,7 @@
 @section('title', 'List of donations')
 
 @section('content')
-    <a class="btn-link btn-primary" href="{{ route('donation.create') }}">Criar doação</a>
+    <a class="btn-link btn-primary" href="{{ route('donation.create') }}">Create donation</a>
 
     <table class="table">
         <thead>
