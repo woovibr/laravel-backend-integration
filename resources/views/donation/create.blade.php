@@ -3,6 +3,8 @@
 @section('title', 'Create a donation')
 
 @section('content')
+    <a class="btn-link btn-primary" href="{{ route('donation.index') }}">List of donations</a>
+
     <form method="POST" action="{{ route('donation.store') }}" novalidate>
         @csrf
 
