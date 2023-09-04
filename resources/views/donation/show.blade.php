@@ -3,6 +3,8 @@
 @section('title', 'Show donation')
 
 @section('content')
+    <a class="btn-link btn-primary" href="{{ route('donation.index') }}">List of donations</a>
+
     <dl>
         <dt>Donation value</dt>
         <dd>{{ $donation->value }}</dd>
