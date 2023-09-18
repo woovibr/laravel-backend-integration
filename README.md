@@ -30,9 +30,9 @@ docker run --rm \
     composer install --ignore-platform-reqs
 ```
 - Copy `.env.example` to `.env`: `cp .env.example .env`
+- Start the server: `./vendor/bin/sail up -d`
 - Generate a key: `./vendor/bin/sail art key:generate`
 - Run the migrations: `./vendor/bin/sail art migrate`
-- Start the server: `./vendor/bin/sail up`
 - Configure your AppID in `.env` file.
 
 ### PHP
