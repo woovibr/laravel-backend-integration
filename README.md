@@ -11,7 +11,7 @@ This is a simple donation application that demonstrates the process of creating 
 
 ## How to run
 
-### Laravel Sail (Docker)
+### Laravel Sail / Docker (recommended way)
 
 Our application has a [Laravel Sail](https://laravel.com/docs/10.x/sail) configuration available, providing an interface to interact seamlessly with Docker in Laravel applications.
 
@@ -30,10 +30,11 @@ docker run --rm \
     composer install --ignore-platform-reqs
 ```
 - Copy `.env.example` to `.env`: `cp .env.example .env`
-- Start the server: `./vendor/bin/sail up -d`
+- Configure your AppID in `.env` file.
+- Start the services (server, database and so on.): `./vendor/bin/sail up -d`
 - Generate a key: `./vendor/bin/sail art key:generate`
 - Run the migrations: `./vendor/bin/sail art migrate`
-- Configure your AppID in `.env` file.
+- [Make sure changes to the `.env` file take effect by clearing the cache:](https://laravel.com/docs/10.x/configuration#configuration-caching): `php artisan config:clear`
 
 ### PHP
 
